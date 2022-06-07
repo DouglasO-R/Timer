@@ -1,30 +1,28 @@
 
+import { Tarefa } from "../../Types/Tarefa";
+import { Item } from "./item";
 
-export function List() {
-    const tarefas = [
-        {
-            nome: "React",
-            tempo: "02:00:00"
-        },
-        {
-            nome: "Javascript",
-            tempo: "01:00:00"
-        },
-        {
-            nome: "TypeScript",
-            tempo: "01:00:00"
-        }
-    ];
+import Style from"./List.module.scss";
+
+type Props = {
+    tarefas: Tarefa[],
+    selecionaTarefa: (tarefaSelecionada: Tarefa) => void
+}
+
+export function List({ tarefas, selecionaTarefa }: Props) {
+
 
     return (
-        <aside>
+        <aside className={Style.listaTarefas}>
             <h2> Estudos do dia</h2>
             <ul>
                 {tarefas.map((tarefa, index) => (
-                    <li key={index}>
-                        <h3>{tarefa.nome}</h3>
-                        <span>{tarefa.tempo}</span>
-                    </li>
+                    <Item
+                        key={tarefa.id}
+                        selecionaTarefa={selecionaTarefa}
+                        tarefa={tarefa}
+
+                    />
                 ))}
             </ul>
         </aside>
