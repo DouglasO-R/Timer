@@ -40,7 +40,7 @@ export function Cronometro({ selecionado,finalizarTarefa }: Props) {
             </div>
 
             <Button onClick={() => regressiva(timer)}>
-                Começãr
+                Começar
             </Button>
         </div>
     )

@@ -23,6 +23,8 @@
   <img alt="timer" src=".github/timer2.png" width="50%">
 </p>
 
+## Deploy 
+Hospedado na vercel : https://timer-n89oi57ma-douglaso-r.vercel.app/
 
 ## 🚀 Tecnologias
 
